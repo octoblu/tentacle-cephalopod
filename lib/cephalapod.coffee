@@ -17,6 +17,7 @@ class Cephalapod
     @authenticate()
 
   authenticate: =>
+    debug 'authenticate'
     authMsg =
       topic: 'authentication'
       authentication: _.pick @options, 'uuid', 'token'

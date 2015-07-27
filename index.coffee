@@ -1,1 +1,1 @@
-module.exports = require('./lib/cephalapod')
+module.exports = require('./lib/cephalopod')

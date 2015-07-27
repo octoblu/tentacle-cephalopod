@@ -1,11 +1,11 @@
 MeshbluConfig = require 'meshblu-config'
-Cephalapod = require './lib/cephalapod'
+Cephalopod = require './'
 
 class Command
   run: =>
     config = new MeshbluConfig
-    cephalapod = new Cephalapod config.toJSON()
-    cephalapod.connect()
+    cephalopod = new Cephalopod config.toJSON()
+    cephalopod.connect()
 
 command = new Command()
 command.run()

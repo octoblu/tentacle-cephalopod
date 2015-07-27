@@ -1,13 +1,13 @@
-Cephalapod = require '../lib/cephalapod'
+Cephalopod = require '../lib/cephalopod'
 
-describe 'Cephalapod', ->
+describe 'Cephalopod', ->
   beforeEach ->
     @net = createConnection: sinon.spy()
 
   beforeEach ->
     options = host: '172.17.8.101', port: 61108
     dependencies = net: @net
-    @sut = new Cephalapod options, dependencies
+    @sut = new Cephalopod options, dependencies
 
   describe '->connect', ->
     beforeEach ->

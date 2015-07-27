@@ -1,8 +1,8 @@
 _ = require 'lodash'
-debug = require('debug')('tentacle-cephalapod')
+debug = require('debug')('tentacle-cephalopod')
 TentacleTransformer = require 'tentacle-protocol-buffer'
 
-class Cephalapod
+class Cephalopod
   constructor: (options={}, dependencies={}) ->
     @options = options
     @net = dependencies.net ? require 'net'
@@ -23,4 +23,4 @@ class Cephalapod
       authentication: _.pick @options, 'uuid', 'token'
     @socket.write @tentacle.toProtocolBuffer authMsg
 
-module.exports = Cephalapod
+module.exports = Cephalopod

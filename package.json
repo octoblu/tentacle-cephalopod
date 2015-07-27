@@ -1,0 +1,35 @@
+{
+  "name": "tentacle-cephalopod",
+  "version": "1.0.0",
+  "description": "Test client for noodling the tentacle server",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/octoblu/tentacle-cephalopod.git"
+  },
+  "keywords": [
+    "the-tentacle",
+    "microblu",
+    "octoblu"
+  ],
+  "author": "Octoblu Inc.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/octoblu/tentacle-cephalopod/issues"
+  },
+  "homepage": "https://github.com/octoblu/tentacle-cephalopod#readme",
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "coffee-script": "^1.9.3",
+    "mocha": "^2.2.5",
+    "sinon": "^1.15.4",
+    "sinon-chai": "^2.8.0"
+  },
+  "dependencies": {
+    "coffee-script": "^1.9.3",
+    "tentacle-protocol-buffer": "^1.1.5"
+  }
+}

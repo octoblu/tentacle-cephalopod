@@ -4,6 +4,7 @@
   "description": "Test client for noodling the tentacle server",
   "main": "index.js",
   "scripts": {
+    "start": "node command.js",
     "test": "mocha"
   },
   "repository": {
@@ -30,6 +31,8 @@
   },
   "dependencies": {
     "coffee-script": "^1.9.3",
+    "lodash": "^3.10.0",
+    "meshblu-config": "^2.0.0",
     "tentacle-protocol-buffer": "^1.1.5"
   }
 }

@@ -1,4 +1,5 @@
 _ = require 'lodash'
+debug = require('debug')('tentacle-cephalapod')
 TentacleTransformer = require 'tentacle-protocol-buffer'
 
 class Cephalapod
@@ -9,13 +10,15 @@ class Cephalapod
 
   connect: =>
     connOptions = _.pick @options, 'host', 'port'
-    @net.createConnection connOptions, (socket) =>
-      @socket = socket
-      @authenticate
+    @socket = @net.createConnection connOptions, @onConnect
+
+  onConnect: =>
+    debug 'socket open'
+    @authenticate()
 
   authenticate: =>
     authMsg =
-      topic: 'authenticate'
+      topic: 'authentication'
       authentication: _.pick @options, 'uuid', 'token'
     @socket.write @tentacle.toProtocolBuffer authMsg
 
